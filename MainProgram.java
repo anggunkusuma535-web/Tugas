@@ -1,40 +1,35 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package AlatMusikPT12;
+package BangunRuangPT12; 
 
-/**
- *
- * @author ANGGUN
- */
 public class MainProgram {
     public static void main(String[] args) {
         
-        System.out.println("=== Demonstrasi Polimorfisme Alat Musik ===");
+        System.out.println("=== Program Pewarisan Volume Bangun Ruang ===");
         
-        // Variabel referensi ALATMUSIK dapat menampung objek dari semua subkelas
-        AlatMusik[] orkestra = new AlatMusik[6];
-        
-        // Mengisi array dengan objek subkelas yang berbeda
-        orkestra[0] = new Piano();
-        orkestra[1] = new Biola();
-        orkestra[2] = new Gitar();
-        orkestra[3] = new Drum();
-        orkestra[4] = new Saxophone();
-        orkestra[5] = new Trumpet();
-        
-        System.out.println("----------------------------------------");
-        System.out.println("Orkestra mulai bermain:");
+        // Inisialisasi Objek dengan data contoh (menggunakan double agar akurat)
+        Kubus kubus = new Kubus(4.0);
+        Balok balok = new Balok(5.0, 3.0, 2.0);
+        Tabung tabung = new Tabung(3.0, 7.0);
+        Kerucut kerucut = new Kerucut(3.0, 7.0);
+        Limas limas = new Limas(4.0, 5.0, 6.0); 
+        Prisma prisma = new Prisma(3.0, 4.0, 10.0);
+        Bola bola = new Bola(5.0);
+
         System.out.println("----------------------------------------");
         
-        // Java secara otomatis menentukan (saat runtime) method mana yang tepat 
-        // untuk dipanggil berdasarkan jenis objek yang sebenarnya (Polimorfisme)
-        for (AlatMusik alat : orkestra) {
-            // Kita hanya memanggil 'alat.mainkan()', tetapi hasilnya berbeda-beda
-            alat.mainkan();
-        }
+        // Menampilkan Hasil Volume dengan memanggil method volume()
+        System.out.println("Volume Kubus (sisi 4.0): " + kubus.volume());
+        System.out.println("Volume Balok (5.0x3.0x2.0): " + balok.volume());
+        
+        // Menggunakan String.format untuk pembulatan agar tampilan lebih rapi
+        System.out.println(String.format("Volume Tabung (r=3.0, t=7.0): %.2f", tabung.volume())); 
+        System.out.println(String.format("Volume Kerucut (r=3.0, t=7.0): %.2f", kerucut.volume()));
+        System.out.println("Volume Limas (Alas 4x5, t=6.0): " + limas.volume());
+        System.out.println("Volume Prisma (Alas Segitiga 3x4, tP=10.0): " + prisma.volume());
+        System.out.println(String.format("Volume Bola (r=5.0): %.2f", bola.volume()));
         
         System.out.println("----------------------------------------");
+        
+        BangunRuang brBalok = new Balok(1, 2, 3);
+        System.out.println("Volume Balok (via ref. BangunRuang): " + brBalok.volume());
     }
 }
