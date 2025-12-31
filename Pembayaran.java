@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.pengantar_pemrograman;
 
 /**
  *
@@ -10,10 +9,10 @@ package com.mycompany.pengantar_pemrograman;
  */
 import java.util.Scanner;
 public class Pembayaran {
-       
-    public static void main (String[] args ){
-   Scanner baca = new Scanner(System.in);
-   System.out.println("===== PROGRAM PEMBAYARAN ====="); 
+    
+  public static void main(String[] args) { 
+  Scanner baca = new Scanner(System.in); 
+ System.out.println("===== PROGRAM PEMBAYARAN ====="); 
  // Barang 1: Indomie 
  System.out.print("Masukkan jumlah Indomie (pcs): "); 
  int jmlIndomie = baca.nextInt(); 
@@ -37,9 +36,12 @@ public class Pembayaran {
  double totalKeripik = jmlKeripik * hrgKeripik; 
  // Hitung total semua 
  double totalBayar = totalIndomie + totalTelor + totalShampoo + totalKeripik;  // Cetak nota
-   System.out.println("\n===== NOTA PEMBAYARAN =====");  System.out.println("Indomie (" + jmlIndomie + " pcs) = Rp" + totalIndomie);  System.out.println("Telor (" + jmlTelor + " pcs) = Rp" + totalTelor);  System.out.println("Shampoo 800ml (" + jmlShampoo + " pcs) = Rp" + totalShampoo);  System.out.println("Keripik Singkong (" + jmlKeripik + " pcs) = Rp" + totalKeripik);  System.out.println("----------------------------"); 
-   System.out.println("TOTAL BAYAR = Rp" + totalBayar); 
-   System.out.println("============================"); 
+ System.out.println("\n===== NOTA PEMBAYARAN =====");  System.out.println("Indomie (" + jmlIndomie + " pcs) = Rp" + totalIndomie);  System.out.println("Telor (" + jmlTelor + " pcs) = Rp" + totalTelor);  System.out.println("Shampoo 800ml (" + jmlShampoo + " pcs) = Rp" + totalShampoo);  System.out.println("Keripik Singkong (" + jmlKeripik + " pcs) = Rp" + totalKeripik);  System.out.println("----------------------------"); 
+ System.out.println("TOTAL BAYAR = Rp" + totalBayar); 
+ System.out.println("============================"); 
  baca.close(); 
-} 
+ } 
+  
 }
+ 
+ 
